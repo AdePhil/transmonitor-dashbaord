@@ -1,12 +1,9 @@
 import React from "react";
 import "./styles.scss";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
-  return (
-    <div className="App">
-      <h2>Hello World</h2>
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
