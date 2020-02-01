@@ -23,3 +23,23 @@ p {
   margin-right: auto;
   padding: 0 20px;
 }
+
+.btn {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: Roboto;
+}
+.btn--radius {
+  border-radius: 30px;
+}
+
+.btn--green {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.btn--bold {
+  font-weight: bold;
+}

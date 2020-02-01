@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./dashbaordlayout.scss";
-const DashboardLayout = () => {
+const DashboardLayout = ({ children }) => {
   return (
     <div className="dashboard">
       <div className="dashboard__nav">
@@ -30,6 +30,62 @@ const DashboardLayout = () => {
           </div>
         </header>
       </div>
+      <aside className="dashboard__side-nav">
+        <button className="btn btn--green btn--radius btn--bold m-side">
+          GENERATE INVOICE
+        </button>
+        <nav className="side-nav">
+          <div className="side-nav__group">
+            <h4 className="side-nav__heading">Main</h4>
+            <a href="#" className="side-nav__item active">
+              <img src="/overview.svg" alt="overview" />
+              <span>Overview</span>
+            </a>
+          </div>
+          <div className="side-nav__group">
+            <h4 className="side-nav__heading">Payments</h4>
+            <a href="#" className="side-nav__item">
+              <img src="/all-payments.svg" alt="All payments" />
+              <span>All Payments</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img src="/reconcilled-payments.svg" alt="reconcilled payments" />
+              <span>Reconcilled Payments</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img
+                src="/unreconcilled-payments.svg"
+                alt="un-reconcilled-payments"
+              />
+              <span>Un-Reconcilled Payments</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img src="/manual-payments.svg" alt="manual payments" />
+              <span>Manual Payments</span>
+            </a>
+          </div>
+          <div className="side-nav__group">
+            <h4 className="side-nav__heading">Orders</h4>
+            <a href="#" className="side-nav__item">
+              <img src="/all-orders.svg" alt="All orders" />
+              <span>All Payments</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img src="/pending-orders.svg" alt="pending orders" />
+              <span>Pending Orders</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img src="/reconcilled-orders.svg" alt="reconciled orders" />
+              <span>Reconcilled Payments</span>
+            </a>
+            <a href="#" className="side-nav__item">
+              <img src="/profile.svg" alt="Marchat profile" />
+              <span>Merchant Profile</span>
+            </a>
+          </div>
+        </nav>
+      </aside>
+      <main className="dashboard__main">{children}</main>
     </div>
   );
 };

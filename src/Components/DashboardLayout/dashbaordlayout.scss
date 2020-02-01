@@ -75,4 +75,49 @@
     font-weight: bold;
     line-height: 28px;
   }
+  &__side-nav {
+    background-color: #fff;
+    padding: 33px 0px 20px 0px;
+    color: #647787;
+  }
+  .m-side {
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  .side-nav {
+    &__heading {
+      font-size: 11px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 5px;
+      margin-left: 40px;
+    }
+    &__group {
+      margin-bottom: 45px;
+      &:first-child {
+        margin-top: 30px;
+      }
+    }
+    &__item {
+      display: block;
+      text-decoration: none;
+      color: #647787;
+      display: flex;
+      align-items: center;
+      padding: 10px 0px;
+      font-size: 11px;
+      padding-left: 35px;
+      border-left: 4px solid transparent;
+      transition: background-color 200ms ease;
+
+      &:hover,
+      &.active {
+        background-color: rgba(24, 117, 240, 0.1);
+        border-left: 4px solid #1875f0;
+      }
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
 }
