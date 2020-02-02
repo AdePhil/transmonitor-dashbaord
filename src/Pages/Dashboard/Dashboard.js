@@ -4,9 +4,15 @@ import Card from "../../Components/Card/index";
 import DashboardLayout from "../../Components/DashboardLayout";
 import { Tooltip, AreaChart, Area, ResponsiveContainer } from "recharts";
 import chartData from "./chartdata";
+import payments from "./tabledata";
+import Table from "../../Components/Table/index";
 class Dashboard extends Component {
-  state = {};
+  state = {
+    payments,
+    chartData
+  };
   render() {
+    const { payments, chartData } = this.state;
     return (
       <DashboardLayout>
         <>
@@ -84,6 +90,10 @@ class Dashboard extends Component {
                 Total Payments: <span className="bold text-green">100</span>
               </p>
             </div>
+          </div>
+          <div className="dashboard__payment">
+            <h2 className="dashboard__payment-heading">Payments</h2>
+            <Table tableData={payments} />
           </div>
         </>
       </DashboardLayout>

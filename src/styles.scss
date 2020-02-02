@@ -62,3 +62,34 @@ p {
 .bold {
   font-weight: bold;
 }
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-v-center {
+  align-items: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.bg-green {
+  background-color: #27ae60;
+}
+.bg-yellow {
+  background-color: #fdc203;
+}
+
+.bg-blue {
+  background-color: #1875f0;
+}
+
+.bg-grey {
+  background-color: #7f8fa4;
+}
