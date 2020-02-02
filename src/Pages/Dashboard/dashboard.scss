@@ -29,6 +29,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .stat-select {
+          margin-right: 40px;
+        }
         .next-prev-buttons {
           button {
             background: linear-gradient(0deg, #f2f4f7 0%, #ffffff 100%);
@@ -95,6 +98,56 @@
       font-size: 36px;
       font-weight: 500px;
       font-weight: normal;
+    }
+    &-options {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      align-items: center;
+      svg {
+        margin-left: -10px;
+      }
+      p {
+        margin: 0;
+      }
+      span {
+        margin-right: 20px;
+      }
+      .search {
+        &-input {
+          min-width: 400px;
+          border: none;
+          border-bottom: 0.5px solid #787878;
+          background: transparent;
+          outline: none;
+          font-size: 14px;
+          padding-left: 12px;
+          margin-right: 20px;
+          @media (max-width: 1110px) {
+            width: 100%;
+            margin-top: 20px;
+          }
+        }
+        &-icon {
+          position: absolute;
+          left: 5px;
+          bottom: 5px;
+        }
+      }
+
+      .caret {
+        width: 15px;
+        color: blue;
+      }
+
+      .custom-select {
+        margin-left: auto;
+        margin-right: 100px;
+        @media (max-width: 1110px) {
+          margin-top: 10px;
+          margin-left: 0;
+        }
+      }
     }
   }
 }
