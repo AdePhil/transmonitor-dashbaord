@@ -8,8 +8,8 @@ const Table = ({ tableData }) => {
     unreconcilled: "grey"
   };
   return (
-    <div>
-      <table cellspacing="0" cellpadding="0">
+    <div className="table">
+      <table>
         <thead>
           <tr>
             <th>Item Type</th>
@@ -47,6 +47,15 @@ const Table = ({ tableData }) => {
           )}
         </tbody>
       </table>
+      <div className="table-bottom-info">
+        <p>Showing 1 to 10 of 500 entries</p>
+        <div className="table-buttons">
+          <button>Prev</button>
+          <button className="active">1</button>
+          <button>2</button>
+          <button>Next</button>
+        </div>
+      </div>
     </div>
   );
 };

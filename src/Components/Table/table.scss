@@ -2,6 +2,31 @@ table {
   background-color: #fff;
   width: 100%;
   border: none;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+  .table-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table-buttons {
+    button {
+      padding: 5px 10px;
+      border: 1px solid #ced0da;
+      background-color: transparent;
+      box-sizing: border-box;
+      border-radius: 2px;
+      color: #000;
+    }
+    button.active {
+      background-color: #1875f0;
+      border: none;
+      color: #fff;
+    }
+  }
 }
 
 td,

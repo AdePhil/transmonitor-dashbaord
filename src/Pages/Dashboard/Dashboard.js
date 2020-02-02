@@ -26,6 +26,10 @@ class Dashboard extends Component {
             <div className="dashboard__stat-graph">
               <div className="dashboard__stat-graph-details">
                 <h3>Today: 5, Aug 2018</h3>
+                <div className="next-prev-buttons">
+                  <button className="btn">&lt;</button>
+                  <button className="btn">&gt;</button>
+                </div>
               </div>
               <ResponsiveContainer width="100%" height="80%">
                 <AreaChart
