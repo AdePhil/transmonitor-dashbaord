@@ -10,9 +10,20 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 5px;
     margin-top: 30px;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 770px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
     &-graph {
       background-color: #fff;
       grid-row: 1/-1;
+      @media (max-width: 1200px) {
+        grid-column: 1/ -1;
+        grid-row: 1 span;
+      }
       &-details {
         padding: 20px 30px;
       }
@@ -23,6 +34,21 @@
       min-width: 350px;
       background-color: #fff;
       padding: 10px 20px 10px 20px;
+      @media (max-width: 1200px) {
+        min-width: 100%;
+        height: 100px;
+      }
+      @media (max-width: 770px) {
+        grid-column: 1/-1;
+      }
+      &.orders {
+        @media (max-width: 1200px) {
+          grid-column: 1/2;
+        }
+        @media (max-width: 770px) {
+          grid-column: 1/-1;
+        }
+      }
 
       h4 {
         margin: 0 0 10px 0;

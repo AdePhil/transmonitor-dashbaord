@@ -64,7 +64,7 @@ class Dashboard extends Component {
                 </AreaChart>
               </ResponsiveContainer>
             </div>
-            <div className="dashboard__stat-info">
+            <div className="dashboard__stat-info orders">
               <h4>Orders</h4>
               <div className="progress" />
               <p>
@@ -77,7 +77,7 @@ class Dashboard extends Component {
                 Total Orders: <span className="bold text-green">100</span>
               </p>
             </div>
-            <div className="dashboard__stat-info">
+            <div className="dashboard__stat-info payments">
               <h4>Payments</h4>
               <div className="progress" />
               <p>

@@ -1,9 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import "./dashbaordlayout.scss";
 const DashboardLayout = ({ children }) => {
+  const [show, setShow] = useState(false);
+  const toggleClick = () => {
+    console.log("here");
+    setShow(previousShow => {
+      return !previousShow;
+    });
+  };
   return (
-    <div className="dashboard">
+    <div className={show ? "dashboard show" : "dashboard"}>
       <div className="dashboard__nav">
         <header className="dashboard__header">
           <div className="dashboard__header-container">
@@ -31,7 +38,10 @@ const DashboardLayout = ({ children }) => {
         </header>
       </div>
       <aside className="dashboard__side-nav">
-        <button className="btn btn--green btn--radius btn--bold m-side">
+        <button className="mobile-hamburger" onClick={toggleClick}>
+          &#x2630;
+        </button>
+        <button className="btn btn--green btn--radius btn--bold m-side invoice-btn">
           GENERATE INVOICE
         </button>
         <nav className="side-nav">

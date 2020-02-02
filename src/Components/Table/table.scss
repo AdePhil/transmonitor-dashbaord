@@ -62,4 +62,53 @@ tbody tr:nth-child(odd) {
   justify-content: center;
   margin-right: 20px;
   font-weight: normal;
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  tbody td {
+    width: 50%;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 10px;
+  }
+  tbody td:before {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  tbody td:nth-of-type(1):before {
+    content: "Item Type";
+  }
+  tbody td:nth-of-type(2):before {
+    content: "Price";
+  }
+  tbody td:nth-of-type(3):before {
+    content: "Transaction";
+  }
+  tbody td:nth-of-type(4):before {
+    content: "Time";
+  }
 }
