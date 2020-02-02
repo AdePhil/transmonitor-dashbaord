@@ -4,4 +4,50 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 30px;
   }
+  &__stat {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    margin-top: 30px;
+    &-graph {
+      background-color: #fff;
+      grid-row: 1/-1;
+      &-details {
+        padding: 20px 30px;
+      }
+    }
+    &-info {
+      min-height: 200px;
+      grid-column: 2 / -1;
+      min-width: 350px;
+      background-color: #fff;
+      padding: 10px 20px 10px 20px;
+
+      h4 {
+        margin: 0 0 10px 0;
+        font-size: 14px;
+      }
+      p {
+        margin: 0 0 5px 0;
+      }
+      .progress {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 5px;
+        background-color: #fdc203;
+        border-radius: 20px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 100%;
+          background-color: #27ae60;
+          border-radius: 20px;
+          width: 80%;
+        }
+      }
+    }
+  }
 }
