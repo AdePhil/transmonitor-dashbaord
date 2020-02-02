@@ -20,8 +20,8 @@ const Table = ({ tableData }) => {
         </thead>
         <tbody>
           {tableData.map(
-            ({ product, amount, transaction_id, status, time }) => (
-              <tr>
+            ({ product, amount, transaction_id, status, time, id }) => (
+              <tr key={id}>
                 <td className="dark">
                   <div className="inline-flex">
                     <span className="initails">VW</span>
@@ -39,7 +39,7 @@ const Table = ({ tableData }) => {
                         {status}
                       </span>
                     </div>
-                    <img src="/caret.svg" alt="caret" class="caret" />
+                    <img src="/caret.svg" alt="caret" className="caret" />
                   </div>
                 </td>
               </tr>

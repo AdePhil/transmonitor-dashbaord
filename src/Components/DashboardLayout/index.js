@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import "./dashbaordlayout.scss";
 const DashboardLayout = ({ children }) => {
   const [show, setShow] = useState(false);
+  const [userOptions, setUserOptions] = useState(false);
   const toggleClick = () => {
     console.log("here");
     setShow(previousShow => {
       return !previousShow;
+    });
+  };
+  const toggleUserOptions = () => {
+    setUserOptions(userOptions => {
+      return !userOptions;
     });
   };
   return (
@@ -15,7 +21,7 @@ const DashboardLayout = ({ children }) => {
         <header className="dashboard__header">
           <div className="dashboard__header-container">
             <p className="dashboard__logo">TransMonitor</p>
-            <nav className="nav">
+            <nav className={userOptions ? "nav show" : "nav"}>
               <a href="#" className="nav__item">
                 Support
               </a>
@@ -34,6 +40,9 @@ const DashboardLayout = ({ children }) => {
                 <img src="/user.png" className="user__img" alt="user avatar" />
               </div>
             </nav>
+            <button className="btn options" onClick={toggleUserOptions}>
+              <img src="/dots.svg" alt="dots" />
+            </button>
           </div>
         </header>
       </div>
